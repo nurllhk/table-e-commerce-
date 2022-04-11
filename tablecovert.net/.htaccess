@@ -1,0 +1,14 @@
+RewriteEngine on
+RewriteRule ^sozlesmeler/([0-9a-zA-Z-_]+)$ terms.php?route=$1 [QSA]
+RewriteRule ^usercp/([0-9a-zA-Z-_]+)$ usercp.php?route=$1 [QSA]
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php
+
+
+RewriteRule ^urun-([0-9a-zA-Z-_]+)  urun-detay.php?sef=$1 [L,QSA]
+
+
+RewriteRule ^homepage$ index.php [NC,L]
+
